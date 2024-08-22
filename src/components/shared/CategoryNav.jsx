@@ -1,4 +1,9 @@
+'use client'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
+
 const CategoryNav = () => {
+    const pathName = usePathname();
 
     const links = [
         {
@@ -34,7 +39,7 @@ const CategoryNav = () => {
             path:"/office"
         },
         {
-            title:"Shop",
+            title:"Shops",
             path:"/shop"
         },
     ]
@@ -44,7 +49,7 @@ const CategoryNav = () => {
             <div className="col-span-1 py-4 px-5 bg-white rounded-md"></div>
             <div className="col-span-2 flex gap-x-4 bg-white px-5 py-4 rounded-md justify-between">
                 {
-                    links.map((link,i)=> <button key={i}>{link.title}</button>)
+                    links.map((link,i)=> <Link href={link.path} className={`${pathName === link.path ? "text-black font-medium" : "hover:text-black text-gray-400 duration-300 transition-all"}`} key={i}>{link.title}</Link>)
                 }
             </div>
             <div className="col-span-1 py-4 px-5 bg-white rounded-md"></div>
