@@ -1,4 +1,6 @@
-import Button from "@/components/Button";
+import Button from "./Button";
+import CategoryNav from "./CategoryNav";
+
 
 const Navbar = () => {
     return (
@@ -12,6 +14,7 @@ const Navbar = () => {
                     <Button text={'Loging'} className={'bg-white border-2 border-black text-black hover:text-white hover:bg-black'}/>
                 </div>
             </nav>
+            <CategoryNav/>
         </section>
     );
 };
