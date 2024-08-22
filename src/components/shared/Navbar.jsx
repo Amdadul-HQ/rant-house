@@ -25,7 +25,7 @@ const Navbar = () => {
     ]
     return (
         <section>
-            <nav className="max-w-screen-xl mx-auto py-4">
+            <nav className="max-w-screen-xl mx-auto py-4 flex justify-between">
                 <h1>
                     BASA BARA
                 </h1>
