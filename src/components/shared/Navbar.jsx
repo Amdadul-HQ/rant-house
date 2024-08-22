@@ -30,7 +30,8 @@ const Navbar = () => {
                     BASA BARA
                 </h1>
                 <div>
-                    <Button text={'Contact'} className={''}/>
+                    <Button text={'Contact'} className={'bg-black text-white'}/>
+                    
                 </div>
             </nav>
         </section>
