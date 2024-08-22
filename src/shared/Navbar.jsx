@@ -1,3 +1,5 @@
+import Button from "@/components/Button";
+
 const Navbar = () => {
     const links = [
         {
@@ -23,10 +25,14 @@ const Navbar = () => {
     ]
     return (
         <section>
-            <h1>Rant</h1>
-            <ul>
-
-            </ul>
+            <nav className="max-w-screen-xl mx-auto py-4">
+                <h1>
+                    BASA BARA
+                </h1>
+                <div>
+                    <Button text={'Contact'} className={''}/>
+                </div>
+            </nav>
         </section>
     );
 };
