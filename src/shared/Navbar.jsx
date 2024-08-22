@@ -1,3 +1,5 @@
+import Button from "@/components/Button";
+
 const Navbar = () => {
     const links = [
         {
@@ -28,7 +30,7 @@ const Navbar = () => {
                     BASA BARA
                 </h1>
                 <div>
-                    
+                    <Button text={'Contact'} className={''}/>
                 </div>
             </nav>
         </section>
