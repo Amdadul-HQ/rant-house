@@ -1,6 +1,8 @@
 'use client'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import SearchInputField from './SearchInputField';
+import FilterSection from './FilterSection';
 
 const CategoryNav = () => {
     const pathName = usePathname();
@@ -46,13 +48,17 @@ const CategoryNav = () => {
 
     return (
         <nav className="grid grid-cols-4 max-w-screen-xl gap-x-4 mx-auto mt-4">
-            <div className="col-span-1 py-4 px-5 bg-white rounded-md"></div>
-            <div className="col-span-2 flex gap-x-4 bg-white px-5 py-4 rounded-md justify-between">
+            <div className="col-span-1 py-4 px-5 bg-white rounded-md">
+                <FilterSection/>
+            </div>
+            <div className="col-span-2 flex gap-x-4 bg-white px-5 py-4 items-center rounded-md justify-between">
                 {
                     links.map((link,i)=> <Link href={link.path} className={`${pathName === link.path ? "text-black font-medium" : "hover:text-black text-gray-400 duration-300 transition-all"}`} key={i}>{link.title}</Link>)
                 }
             </div>
-            <div className="col-span-1 py-4 px-5 bg-white rounded-md"></div>
+            <div className="col-span-1 py-4 px-5 bg-white rounded-md">
+                <SearchInputField/>
+            </div>
         </nav>
     );
 };
