@@ -1,6 +1,7 @@
 'use client'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import SearchInputField from './SearchInputField';
 
 const CategoryNav = () => {
     const pathName = usePathname();
@@ -52,7 +53,9 @@ const CategoryNav = () => {
                     links.map((link,i)=> <Link href={link.path} className={`${pathName === link.path ? "text-black font-medium" : "hover:text-black text-gray-400 duration-300 transition-all"}`} key={i}>{link.title}</Link>)
                 }
             </div>
-            <div className="col-span-1 py-4 px-5 bg-white rounded-md"></div>
+            <div className="col-span-1 py-4 px-5 bg-white rounded-md">
+                <SearchInputField/>
+            </div>
         </nav>
     );
 };
