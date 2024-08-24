@@ -3,7 +3,7 @@ import React from 'react';
 const FilterSection = () => {
     return (
         <div className='flex w-full h-full'>
-            <select className='border h-full rounded-lg w-full'>
+            <select className='border h-full rounded-lg w-full outline-gray-400 px-3'>
                 <option value="">Sort by</option>
                 <option value="price-high">Price (High to Low)</option>
                 <option value="price-low">Price (Low to High)</option>
