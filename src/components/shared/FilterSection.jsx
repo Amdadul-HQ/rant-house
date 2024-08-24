@@ -2,8 +2,8 @@ import React from 'react';
 
 const FilterSection = () => {
     return (
-        <div>
-            <select>
+        <div className='flex'>
+            <select className='border h-full w-full'>
                 <option value="">Sort by</option>
                 <option value="price-high">Price (High to Low)</option>
                 <option value="price-low">Price (Low to High)</option>
